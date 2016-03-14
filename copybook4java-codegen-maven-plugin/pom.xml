@@ -2,7 +2,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dk.nversion</groupId>
+    <groupId>com.nordea.oss</groupId>
     <artifactId>copybook4java-codegen-maven-plugin</artifactId>
     <version>1.0.3</version>
 
@@ -21,9 +21,9 @@
         <developer>
             <id>tlbdk</id>
             <name>Troels Liebe Bentsen</name>
-            <email>tlb@nversion.dk</email>
-            <organization>NVersion</organization>
-            <organizationUrl>http://www.nversion.dk</organizationUrl>
+            <email>troels.bentsen@nordea.com</email>
+            <organization>Nordea Bank AB</organization>
+            <organizationUrl>http://www.nordea.com</organizationUrl>
             <roles>
                 <role>developer</role>
             </roles>
@@ -136,7 +136,7 @@
         <resources>
             <resource>
                 <directory>../</directory>
-                <targetPath>dk/nversion/copybook/codegen</targetPath>
+                <targetPath>com/nordea/oss/copybook/codegen</targetPath>
                 <includes>
                     <include>classconverter.html</include>
                 </includes>
@@ -206,7 +206,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>dk.nversion</groupId>
+            <groupId>com.nordea.oss</groupId>
             <artifactId>copybook4java</artifactId>
             <version>1.0.2</version>
         </dependency>

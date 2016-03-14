@@ -1,4 +1,10 @@
 <!DOCTYPE>
+<!--
+ ~ Copyright (c) 2015. Troels Liebe Bentsen <tlb@nversion.dk>
+ ~ Copyright (c) 2016. Nordea Bank AB
+ ~ Licensed under the MIT license (LICENSE.txt)
+-->
+
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -267,8 +273,8 @@
         if(packageName) {
             classes = classes.map(function(currentClass, index) {
                 var header = "package " + packageName + ";\n\n"
-                        + "import dk.nversion.copybook.annotations.CopyBook;\n"
-                        + "import dk.nversion.copybook.annotations.CopyBookLine;\n";
+                        + "import com.nordea.oss.copybook.annotations.CopyBook;\n"
+                        + "import com.nordea.oss.copybook.annotations.CopyBookLine;\n";
                 header += (currentClass.indexOf("BigInteger") > 0 ? "import java.math.BigInteger;\n" : "");
                 header += (currentClass.indexOf("BigDecimal") > 0 ? "import java.math.BigDecimal;\n" : "");
                 return header + "\n" + currentClass;

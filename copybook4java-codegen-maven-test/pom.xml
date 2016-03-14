@@ -2,7 +2,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dk.nversion</groupId>
+    <groupId>com.nordea.oss</groupId>
     <artifactId>copybook4java-codegen-maven-test</artifactId>
     <version>1.0</version>
 
@@ -29,7 +29,7 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>dk.nversion</groupId>
+                <groupId>com.nordea.oss</groupId>
                 <artifactId>copybook4java-codegen-maven-plugin</artifactId>
                 <version>1.0.3</version>
                 <configuration>
@@ -50,12 +50,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>dk.nversion</groupId>
+            <groupId>com.nordea.oss</groupId>
             <artifactId>copybook4java</artifactId>
             <version>1.0.2</version>
         </dependency>
         <dependency>
-            <groupId>dk.nversion</groupId>
+            <groupId>com.nordea.oss</groupId>
             <artifactId>copybook4java-codegen-maven-plugin</artifactId>
             <version>1.0.3</version>
         </dependency>

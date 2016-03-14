@@ -81,7 +81,7 @@ The different CopyBookMappers can be configured, by using the supported configur
 @CopyBook(type = FullMapper.class, charset="UTF-8", strict = true) // Use the FullMapper, UTF-8 as charset and be strict about uninitialized data structures by throwing an exception when this is meet.
 ```
 
-The CopyBookFieldFormat annotation can be set on both class level on a individual field to overwrite the defaults, the defaults are defined in the interface [CopyBookDefaults](src/main/java/dk/nversion/copybook/annotations/CopyBookDefaults.java)
+The CopyBookFieldFormat annotation can be set on both class level on a individual field to overwrite the defaults, the defaults are defined in the interface [CopyBookDefaults](src/main/java/com/nordea/oss/copybook/annotations/CopyBookDefaults.java)
 
 ```java
 @CopyBookFieldFormat(type = IntegerToInteger.class, rightPadding = false, paddingChar = '0', nullFillerChar = (byte)0, signingType = CopyBookFieldSigningType.PREFIX)
@@ -118,12 +118,12 @@ Include dependencies and plugin in pom.xml, and place copybook definition files 
 ```xml
 <dependencies>
     <dependency>
-        <groupId>dk.nversion</groupId>
+        <groupId>com.nordea.oss</groupId>
         <artifactId>copybook4java</artifactId>
         <version>1.0.2</version>
     </dependency>
     <dependency>
-        <groupId>dk.nversion</groupId>
+        <groupId>com.nordea.oss</groupId>
         <artifactId>copybook4java-codegen-maven-plugin</artifactId>
         <version>1.0.3</version>
     </dependency>
@@ -134,7 +134,7 @@ Include dependencies and plugin in pom.xml, and place copybook definition files 
 <build>
     <plugins>
         <plugin>
-            <groupId>dk.nversion</groupId>
+            <groupId>com.nordea.oss</groupId>
             <artifactId>copybook4java-codegen-maven-plugin</artifactId>
             <version>1.0.3</version>
             <configuration>
@@ -161,3 +161,21 @@ CopyBook4Java provides a simple class converter that can be used for automatic c
 [Try it here](https://rawgit.com/tlbdk/copybook4java/master/classconverter.html)
 
 ![alt text](classconverter.png "classconvert.html")
+
+## License and Copyright
+
+The initial version of CopyBook4Java was developed as a part-time 
+project outside normal work hours and copyright was retained by Troels 
+Liebe Bentsen. In start of 2016 the project was taken up as an official
+open source project for Nordea Bank AB and a perpetual license for 
+Nordea Bank AB to use and relicense the source code as it sees fit was
+given with no limitations or conditions.
+
+Copyright (c) 2015 Troels Liebe Bentsen <tlb@nversion.dk>
+Copyright (c) 2015 Nordea Bank AB
+
+Licensed under the MIT license [LICENSE.txt](LICENSE.txt)
+
+## Contributors
+
+* [Troels Liebe Bentsen](https://github.com/tlbdk)
