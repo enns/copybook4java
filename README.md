@@ -122,11 +122,6 @@ Include dependencies and plugin in pom.xml, and place copybook definition files 
         <artifactId>copybook4java</artifactId>
         <version>1.0.2</version>
     </dependency>
-    <dependency>
-        <groupId>com.nordea.oss</groupId>
-        <artifactId>copybook4java-codegen-maven-plugin</artifactId>
-        <version>1.0.3</version>
-    </dependency>
 </dependencies>
 ```
 
@@ -154,6 +149,7 @@ Include dependencies and plugin in pom.xml, and place copybook definition files 
     </plugins>
 </build>
 ```
+
 ## Convert CopyBook to annotated java class
 
 CopyBook4Java provides a simple class converter that can be used for automatic conversion from a copybook to an annotated Java class, just open classconverter.html with any modern browser and copy/paste in the copybook and a translated version will be provided:
@@ -172,6 +168,7 @@ Nordea Bank AB to use and relicense the source code as it sees fit was
 given with no limitations or conditions.
 
 Copyright (c) 2015 Troels Liebe Bentsen <tlb@nversion.dk>
+
 Copyright (c) 2015 Nordea Bank AB
 
 Licensed under the MIT license [LICENSE.txt](LICENSE.txt)
