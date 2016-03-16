@@ -10,7 +10,6 @@ import java.lang.annotation.*;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-@Repeatable(CopyBookLines.class)
-public @interface CopyBookLine {
+public @interface CopyBookLine1 {
     String value();
 }

@@ -12,6 +12,7 @@ import com.nordea.oss.copybook.exceptions.CopyBookException;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CopyBookField {
@@ -43,7 +44,7 @@ public class CopyBookField {
         return field.getType().isArray();
     }
 
-    public CopyBookField(Class<?> type, Field field, String name, int size, int decimals, int minOccurs, int maxOccurs, String[] lines, String counterKey, TypeConverter converter) {
+    public CopyBookField(Class<?> type, Field field, String name, int size, int decimals, int minOccurs, int maxOccurs, List<String> lines, String counterKey, TypeConverter converter) {
         // Handle private fields
         if(!field.isAccessible()) {
             field.setAccessible(true);
@@ -51,7 +52,7 @@ public class CopyBookField {
 
         this.type = type;
         this.field = field;
-        this.lines = lines.clone();
+        this.lines = lines.toArray(new String[lines.size()]);
         this.counterKey = counterKey;
         this.converter = converter;
         this.name = name;

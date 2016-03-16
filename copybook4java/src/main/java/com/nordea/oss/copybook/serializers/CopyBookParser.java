@@ -84,12 +84,18 @@ public class CopyBookParser {
 
         // Iterate over the class fields with CopyBookLine annotation
         for (Field field : type.getDeclaredFields()) {
-            String[] copyBookLines = Arrays.stream(field.getAnnotationsByType(CopyBookLine.class)).map(cbl -> cbl.value()).toArray(String[]::new);
+            List<String> copyBookLines = Arrays.stream(field.getAnnotationsByType(CopyBookLine.class)).map(CopyBookLine::value).collect(Collectors.toList());
+            copyBookLines.addAll(Arrays.stream(field.getAnnotationsByType(CopyBookLine1.class)).map(CopyBookLine1::value).collect(Collectors.toList()));
+            copyBookLines.addAll(Arrays.stream(field.getAnnotationsByType(CopyBookLine2.class)).map(CopyBookLine2::value).collect(Collectors.toList()));
+            copyBookLines.addAll(Arrays.stream(field.getAnnotationsByType(CopyBookLine3.class)).map(CopyBookLine3::value).collect(Collectors.toList()));
+            copyBookLines.addAll(Arrays.stream(field.getAnnotationsByType(CopyBookLine4.class)).map(CopyBookLine4::value).collect(Collectors.toList()));
+            copyBookLines.addAll(Arrays.stream(field.getAnnotationsByType(CopyBookLine5.class)).map(CopyBookLine5::value).collect(Collectors.toList()));
+
             CopyBookRedefine copyBookRedefine = field.getDeclaredAnnotation(CopyBookRedefine.class);
             String redefineOn = copyBookRedefine != null ? copyBookRedefine.on() : null;
             String redefineMatch = copyBookRedefine != null ? copyBookRedefine.match() : null;
 
-            if(copyBookLines.length > 0) {
+            if(copyBookLines.size() > 0) {
                 String fieldName = type.getName() + "." + field.getName();
                 Class<?> fieldBaseType = field.getType().isArray() ? field.getType().getComponentType() : field.getType();
                 String fieldTypeName = getTypeClassSimpleName(fieldBaseType);

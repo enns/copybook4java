@@ -6,14 +6,13 @@
 
 package com.nordea.oss.copybook.serializers;
 
-import com.nordea.oss.copybook.annotations.CopyBook;
-import com.nordea.oss.copybook.annotations.CopyBookLine;
-import com.nordea.oss.copybook.annotations.CopyBookRedefine;
+import com.nordea.oss.copybook.annotations.*;
 import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.List;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -678,5 +677,19 @@ public class CopyBookParserFormatTest {
 
     // TODO - Implement date format: 05 EFFECTDATE  PIC X(8) DATE FORMAT YYYYXXXX.
 
+    @CopyBook()
+    public class MultiLineSeparateAnnotations {
+        @CopyBookLine1("04 OBJ.")
+        @CopyBookLine2("04 VALUE PIC X.")
+        public String start;
+        @CopyBookLine("04 VALUE PIC 9V9.")
+        public BigDecimal value;
+    }
 
+    @Test
+    public void testMultiLineSeparateAnnotations() throws Exception {
+        CopyBookParser copyBookParser = new CopyBookParser(MultiLineSeparateAnnotations.class);
+        CopyBookField field = copyBookParser.getConfig().getFields().get(0);
+        assertArrayEquals(field.getLines(), new String[] { "04 OBJ.", "04 VALUE PIC X." });
+    }
 }
