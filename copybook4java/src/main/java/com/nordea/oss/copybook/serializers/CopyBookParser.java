@@ -315,7 +315,7 @@ public class CopyBookParser {
             if(annotationType.isInstance(annotation)) {
                 results.add((T)annotation);
 
-            } else if (!annotation.annotationType().getName().startsWith("java")) {
+            } else if (annotation.annotationType().getAnnotation(annotationType) != null) {
                 results.addAll(getAnnotationsRecursively(annotation.annotationType(), annotationType));
             }
         }
@@ -334,7 +334,7 @@ public class CopyBookParser {
                 CopyBookFieldFormat fieldFormat = (CopyBookFieldFormat)annotation;
                 results.put(fieldFormat.type().getSimpleName(), createTypeConverter(fieldFormat, charset, strict));
 
-            } else if (!annotation.annotationType().getName().startsWith("java")) {
+            } else if (annotation.annotationType().getAnnotation(CopyBookFieldFormat.class) != null) {
                 results.putAll(getTypeConvertersRecursively(annotation.annotationType(), charset, strict));
             }
         }
