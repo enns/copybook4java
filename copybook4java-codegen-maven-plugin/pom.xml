@@ -14,7 +14,7 @@
 
     <packaging>maven-plugin</packaging>
     <name>copybook4java-codegen-maven-plugin Maven Mojo</name>
-    <url>https://travis-ci.org/tlbdk/copybook4java</url>
+    <url>https://travis-ci.org/NordeaOSS/copybook4java</url>
     <description>CopyBook serializer and deserializer for Java where CopyBook lines are used to annotate a normal Java class</description>
 
     <developers>
@@ -33,12 +33,12 @@
 
     <ciManagement>
         <system>travis-ci</system>
-        <url>https://travis-ci.org/tlbdk/copybook4java</url>
+        <url>https://travis-ci.org/NordeaOSS/copybook4java</url>
     </ciManagement>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/tlbdk/copybook4java/issues</url>
+        <url>https://github.com/NordeaOSS/copybook4java/issues</url>
     </issueManagement>
 
     <licenses>
@@ -50,8 +50,8 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/tlbdk/copybook4java.git</url>
-        <connection>scm:git:git@github.com:tlbdk/copybook4java.git</connection>
+        <url>https://github.com/NordeaOSS/copybook4java.git</url>
+        <connection>scm:git:git@github.com:NordeaOSS/copybook4java.git</connection>
     </scm>
 
     <distributionManagement>
