@@ -120,7 +120,7 @@ Include dependencies and plugin in pom.xml, and place copybook definition files 
     <dependency>
         <groupId>com.nordea.oss</groupId>
         <artifactId>copybook4java</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </dependency>
 </dependencies>
 ```
@@ -131,7 +131,7 @@ Include dependencies and plugin in pom.xml, and place copybook definition files 
         <plugin>
             <groupId>com.nordea.oss</groupId>
             <artifactId>copybook4java-codegen-maven-plugin</artifactId>
-            <version>1.0.3</version>
+            <version>1.0.4</version>
             <configuration>
                 <inputFilter>^.*\.txt$</inputFilter>
                 <inputPath>src/test/resources/</inputPath>
@@ -167,9 +167,9 @@ open source project for Nordea Bank AB and a perpetual license for
 Nordea Bank AB to use and relicense the source code as it sees fit was
 given with no limitations or conditions.
 
-Copyright (c) 2015 Troels Liebe Bentsen <tlb@nversion.dk>
+Copyright (c) 2015-2016 Troels Liebe Bentsen <tlb@nversion.dk>
 
-Copyright (c) 2015 Nordea Bank AB
+Copyright (c) 2016 Nordea Bank AB
 
 Licensed under the MIT license [LICENSE.txt](LICENSE.txt)
 

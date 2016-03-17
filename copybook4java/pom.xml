@@ -6,7 +6,7 @@
 
     <groupId>com.nordea.oss</groupId>
     <artifactId>copybook4java</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,8 +50,8 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/tlbdk/copybook4java.git</url>
-        <connection>scm:git:git@github.com:tlbdk/copybook4java.git</connection>
+        <url>https://github.com/NordeaOSS/copybook4java.git</url>
+        <connection>scm:git:git@github.com:NordeaOSS/copybook4java.git</connection>
     </scm>
 
     <distributionManagement>
