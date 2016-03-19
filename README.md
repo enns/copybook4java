@@ -154,7 +154,7 @@ Include dependencies and plugin in pom.xml, and place copybook definition files 
 
 CopyBook4Java provides a simple class converter that can be used for automatic conversion from a copybook to an annotated Java class, just open classconverter.html with any modern browser and copy/paste in the copybook and a translated version will be provided:
 
-[Try it here](https://rawgit.com/NordeaOSSBuild/copybook4java/master/classconverter.html)
+[Try it here](https://rawgit.com/NordeaOSS/copybook4java/master/classconverter.html)
 
 ![alt text](classconverter.png "classconvert.html")
 
