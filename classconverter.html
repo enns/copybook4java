@@ -216,6 +216,7 @@
 
             fields.forEach(function(field, i){
                 var java_name = toCamelCase(field["name"].replace(".", "_"));
+                var java_type = (!field["type"] || field["type"] === "[]") ?  toCapitalCase(java_name) + field["type"] : field["type"];
                 var accessorString = "private ";
                 if(accessor.match(/^public/)) { accessorString = "public "; }
                 if(accessor.match(/^package/)) { accessorString = ""; }
@@ -225,11 +226,11 @@
                 });
 
                 if (field["fields"].length > 0) {
-                    currentClass += " ".repeat(level * indentation + indentation) + accessorString + (subclass !== "nested" ? rootClassName : "") + toCapitalCase(java_name) + " " + java_name + ";\n";
+                    currentClass += " ".repeat(level * indentation + indentation) + accessorString + (subclass !== "nested" ? rootClassName : "") + java_type + " " + java_name + ";\n";
                     subclasses += generateJavaClasses((subclass !== "nested" ? rootClassName : "") + toCapitalCase(java_name), field["fields"], indentation, subclass === "nested" ? (level + 1) : level);
 
                 } else {
-                    currentClass += " ".repeat(level * indentation + indentation) + accessorString + field["type"] + " " + java_name + ";\n";
+                    currentClass += " ".repeat(level * indentation + indentation) + accessorString + java_type + " " + java_name + ";\n";
                 }
 
                 if(fields.length -1 > i) { currentClass += "\n"; }
@@ -239,7 +240,7 @@
                 currentClass += "\n";
                 fields.forEach(function (field, i) {
                     var java_name = toCamelCase(field["name"].replace(".", "_"));
-                    var java_type = field["fields"].length > 0 ? toCapitalCase(java_name) : field["type"];
+                    var java_type = (!field["type"] || field["type"] === "[]") ?  toCapitalCase(java_name) + field["type"] : field["type"];
 
                     if(accessor.match(/get/)) {
                         currentClass += " ".repeat(level * indentation + indentation) + "public " + java_type + " get" + toCapitalCase(java_name) + "() {\n";
