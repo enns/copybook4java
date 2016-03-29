@@ -205,6 +205,7 @@
     </profiles>
 
     <dependencies>
+        <!-- TODO: Remove when we find an alternative for ByteUtils, fx. som Apache commons -->
         <dependency>
             <groupId>com.nordea.oss</groupId>
             <artifactId>copybook4java</artifactId>
