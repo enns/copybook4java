@@ -4,7 +4,7 @@
 
     <groupId>com.nordea.oss</groupId>
     <artifactId>copybook4java-codegen-maven-plugin</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,6 +22,17 @@
             <id>tlbdk</id>
             <name>Troels Liebe Bentsen</name>
             <email>troels.bentsen@nordea.com</email>
+            <organization>Nordea Bank AB</organization>
+            <organizationUrl>http://www.nordea.com</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Copenhagen</timezone>
+        </developer>
+        <developer>
+            <id>morten-holm</id>
+            <name>Morten Holm</name>
+            <email>morten.holm@consult.nordea.com</email>
             <organization>Nordea Bank AB</organization>
             <organizationUrl>http://www.nordea.com</organizationUrl>
             <roles>

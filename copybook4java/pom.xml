@@ -29,6 +29,17 @@
             </roles>
             <timezone>Europe/Copenhagen</timezone>
         </developer>
+        <developer>
+            <id>morten-holm</id>
+            <name>Morten Holm</name>
+            <email>morten.holm@consult.nordea.com</email>
+            <organization>Nordea Bank AB</organization>
+            <organizationUrl>http://www.nordea.com</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Copenhagen</timezone>
+        </developer>
     </developers>
 
     <ciManagement>

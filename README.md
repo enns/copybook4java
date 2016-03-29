@@ -131,7 +131,7 @@ Include dependencies and plugin in pom.xml, and place copybook definition files 
         <plugin>
             <groupId>com.nordea.oss</groupId>
             <artifactId>copybook4java-codegen-maven-plugin</artifactId>
-            <version>1.0.4</version>
+            <version>1.0.5</version>
             <configuration>
                 <inputFilter>^.*\.txt$</inputFilter>
                 <inputPath>src/test/resources/</inputPath>
