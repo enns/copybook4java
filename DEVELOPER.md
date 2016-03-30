@@ -7,6 +7,7 @@
 
 ```bash
 git commit -m 'Releasing <project>@<version>' fx copybook4java-codegen-maven-plugin@v1.0.5
+git push
 git tag <project>@<version> # fx copybook4java-codegen-maven-plugin@v1.0.5
 git push origin <project>@<version> # fx copybook4java-codegen-maven-plugin@v1.0.5
 mvn clean deploy -P release --settings settings.xml
@@ -15,8 +16,7 @@ mvn clean deploy -P release --settings settings.xml
 2. Build and deploy release
 
 ```bash
-git push
-git push origin v1.0.1
+cd <project to be released>
 mvn clean deploy -P release
 ```
 3. https://oss.sonatype.org/#welcome
