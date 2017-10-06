@@ -29,7 +29,7 @@ public class CopyBookConverter {
         InputStream inputStream = this.getClass().getResourceAsStream("classconverter.html");
         String js = extractJS(inputStream);
 
-        manager = new ScriptEngineManager();
+        manager = new ScriptEngineManager(null);
         engine = manager.getEngineByName("nashorn");
 
         if(engine == null) {
