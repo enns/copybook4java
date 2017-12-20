@@ -171,7 +171,7 @@ Copyright (c) 2015-2016 Troels Liebe Bentsen <tlb@nversion.dk>
 
 Copyright (c) 2016 Nordea Bank AB
 
-Licensed under the MIT license [LICENSE.txt](LICENSE.txt)
+Licensed under the MIT license [LICENSE](LICENSE)
 
 ## Contributors
 
